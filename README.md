@@ -1,5 +1,10 @@
 ## Time Generator ⚡ Vite JS Vanilla
 
+### Criado com:
+- JavaScript
+- Vite
+- CSS
+
 ### Instalação
 ⚠️ *Certifique-se de ter o Node instalado.*
 
