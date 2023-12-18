@@ -21,15 +21,27 @@ input, button {
   padding: 0.5rem;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1.3rem 0;
+
+  border-bottom: 1px solid #aaaaaa;
+}
+
+header img {
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+  
+  width: 55px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-}
-
-.container h1 {
-  margin-bottom: 3rem;
 }
 
 .form button {
@@ -63,4 +75,11 @@ input, button {
 
 #results li span {
   border-bottom: 1px solid;
+}
+
+@media (max-width: 425px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
