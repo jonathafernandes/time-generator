@@ -5,14 +5,14 @@
 }
 
 body {
-  background-color: #121212;
+  background-color: #1a1a1a;
   color: #f1f1f1;
   font-family: 'Manrope', sans-serif;
 }
 
 input, button {
-  background: transparent;
-  border: 1px solid #FF630B;
+  background: #1a1a1a;
+  border: none;
   border-radius: 4px;
   color: #f1f1f1;
   font-family: 'Manrope', sans-serif;
@@ -27,7 +27,7 @@ header {
   justify-content: space-around;
   padding: 0.8rem 0;
 
-  border-bottom: 1px solid #727272;
+  background: #242424;
 }
 
 .container {
@@ -38,19 +38,20 @@ header {
 }
 
 .form {
-  border: 1px solid #727272;
+  background: #242424;
   border-radius: 5px;
 
   padding: 2rem;
 }
 
 .form button {
-  cursor: pointer;
+  border: 1px solid #FF630B;
+  cursor: pointer;  
 }
 
 .form button:hover {
   color: #121212;
-  background: #f1f1f1;
+  background: #FF630B;
 }
 
 #results {
@@ -66,8 +67,8 @@ header {
 #results li {
   border: 1px solid #FF630B;
   border-radius: 4px;
-  color: #121212;
-  background: #f1f1f1;
+  background: #242424;
+
 
   padding: 0.7rem;
   width: 8rem;
