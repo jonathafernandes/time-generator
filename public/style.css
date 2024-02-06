@@ -30,6 +30,24 @@ header {
   background: #242424;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 24px;
+}
+
+.logo span {
+  font-weight: 700;
+}
+
+header p {
+  font-size: 0.85rem;
+}
+
 .container {
   display: flex;
   flex-direction: column;
