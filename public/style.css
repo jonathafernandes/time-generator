@@ -24,8 +24,8 @@ input, button {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 0.8rem 0;
+  justify-content: center;
+  padding: 1rem 0;
 
   background: #242424;
 }
@@ -60,6 +60,13 @@ header p {
   border-radius: 5px;
 
   padding: 2rem;
+}
+
+.form .title {
+  border-bottom: 1px solid #FF630B;
+
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .form button {
