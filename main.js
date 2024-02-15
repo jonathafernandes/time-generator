@@ -14,7 +14,7 @@ defaultCreation.addEventListener('click', () => {
   backButton.style.display = 'block';
 
   content.innerHTML = `
-    <div class="form">
+    <div data-aos="zoom-out" class="form">
       <label for="quantity">Digite a quantidade de jogadores em cada time (entre 4 e 5):</label>
       <input type="number" id="quantity" min="4" max="5" value="5">
       <br>    
@@ -38,7 +38,7 @@ customCreation.addEventListener('click', () => {
   customCreation.style.display = 'none';
   backButton.style.display = 'block';
 
-  content.innerHTML = `<h2>teste</h2>`;
+  content.innerHTML = `<h2 data-aos="zoom-out">Em breve...</h2>`;
   createTimes();
 });
 

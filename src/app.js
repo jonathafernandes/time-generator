@@ -33,7 +33,12 @@ const createTimes = () => {
       const numbersDrawn = generateNoRepetition(possibleNumbers, quantityNumbers);
 
       const listItem = document.createElement('li');
-      listItem.innerHTML = `<strong>Time ${raffle}</strong> <br> ${numbersDrawn.join(', ')}`;
+      listItem.innerHTML = `
+        <div data-aos="zoom-out">
+          <strong>Time ${raffle}</strong>
+          <br/>
+          ${numbersDrawn.join(', ')}
+        </div>`;
       resultList.appendChild(listItem);
     }
   }
