@@ -7,16 +7,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>Time Generator</title>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <img src="./public/images/logo.svg" alt="">
-        <span>Time Generator</span>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="./public/images/logo.svg" alt="">
+          <span>Time Generator</span>
+        </div>
+      </header>
+      <div id="app">
+        <p class="title">Crie seus times de futsal!</p>
+        <button id="defaultCreation">Criação padrão</button>
+        <button id="customCreation">Criação personalizada</button>
+        <div class="content"></div>
+        <button id="backButton"><i class="ph ph-caret-left"></i></button>
       </div>
-    </header>
-    <div class="container"></div>
+      <footer>Feito por <a href="#">Jonatha Fernandes</a></footer>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

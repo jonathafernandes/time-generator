@@ -11,14 +11,29 @@ body {
 }
 
 input, button {
-  background: #1a1a1a;
-  border: none;
+  background: #FF630B;
+  border: 1px solid #242424;
   border-radius: 4px;
-  color: #f1f1f1;
+  color: #121212;
   font-family: 'Manrope', sans-serif;
 
   margin: 0.8rem 0;
   padding: 0.5rem;
+
+  opacity: 0.9;
+}
+
+button {
+  cursor: pointer;  
+}
+
+button:hover {
+  opacity: 1;
+}
+
+a {
+  color: #f1f1f1;
+  text-decoration: underline;
 }
 
 header {
@@ -49,34 +64,38 @@ header p {
 }
 
 .container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#app {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
 }
 
-.form {
-  background: #242424;
-  border-radius: 5px;
-
-  padding: 2rem;
-}
-
-.form .title {
+#app .title {
   border-bottom: 1px solid #FF630B;
 
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
 }
 
-.form button {
-  border: 1px solid #FF630B;
-  cursor: pointer;  
+#app #backButton {
+  display: none;
 }
 
-.form button:hover {
-  color: #121212;
-  background: #FF630B;
+#defaultCreation, #customCreation {
+  width: 200px;
+}
+
+.form {
+  background: #242424;
+  border-radius: 5px;
+
+  padding: 1.5rem;
 }
 
 #results {
@@ -84,7 +103,7 @@ header p {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 2rem;
+  margin: 1rem;
 
   list-style: none;
 }
@@ -93,7 +112,6 @@ header p {
   border: 1px solid #FF630B;
   border-radius: 4px;
   background: #242424;
-
 
   padding: 0.7rem;
   width: 8rem;
@@ -104,9 +122,21 @@ header p {
   border-bottom: 1px solid;
 }
 
-@media (max-width: 425px) {
+footer {
+  font-size: 0.9rem;
+  text-align: center;
+  opacity: 0.7;
+
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 573px) {
   header {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .form {
+    padding: 1rem;
   }
 }
