@@ -11,11 +11,9 @@ body {
 }
 
 input, button {
-  background: #FF630B;
-  border: 1px solid #242424;
   border-radius: 4px;
-  color: #121212;
   font-family: 'Manrope', sans-serif;
+  outline: none;
 
   margin: 0.8rem 0;
   padding: 0.5rem;
@@ -23,8 +21,17 @@ input, button {
   opacity: 0.9;
 }
 
+input {
+  color: #f1f1f1;
+  background: #1a1a1a;
+  border: 1px solid #ebe9e8;
+}
+
 button {
-  cursor: pointer;  
+  background: #FF630B;
+  border: none;
+
+  cursor: pointer;
 }
 
 button:hover {
@@ -33,7 +40,7 @@ button:hover {
 
 a {
   color: #f1f1f1;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 header {
@@ -97,6 +104,11 @@ header p {
 
   margin: 0 1rem;
   padding: 1.5rem;
+}
+
+.form.customCreation {
+  display: flex;
+  flex-direction: column;
 }
 
 #results {
