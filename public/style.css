@@ -15,7 +15,7 @@ input, button {
   font-family: 'Manrope', sans-serif;
   outline: none;
 
-  margin: 0.8rem 0;
+  margin-top: 0.3rem;
   padding: 0.5rem;
 
   opacity: 0.9;
@@ -94,8 +94,9 @@ header p {
   display: none;
 }
 
-#defaultCreation, #customCreation {
+#defaultCreationButton, #customCreationButton {
   width: 200px;
+  margin-top: 0.8rem;
 }
 
 .form {
@@ -111,7 +112,18 @@ header p {
   flex-direction: column;
 }
 
-#results {
+.resultContent {
+  margin: 1rem 0;
+}
+
+.inputPlayers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+#resultsList {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -121,7 +133,7 @@ header p {
   list-style: none;
 }
 
-#results li {
+#resultsList li {
   border: 1px solid #FF630B;
   border-radius: 4px;
   background: #242424;
@@ -131,7 +143,7 @@ header p {
   height: 6rem;
 }
 
-#results li span {
+#resultsList li span {
   border-bottom: 1px solid;
 }
 
@@ -140,7 +152,7 @@ footer {
   text-align: center;
   opacity: 0.7;
 
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 @media (max-width: 573px) {

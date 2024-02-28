@@ -1,7 +1,7 @@
-const createTimes = () => {
+const createTimesDefaultCreation = () => {
     const form = document.querySelector('.form');
 
-    document.getElementById('createTimesButton').addEventListener('click', function() {
+    document.getElementById('createTimesDefaultCreationButton').addEventListener('click', function() {
     form.style.display = 'none';
     drawLots();
   });
@@ -24,7 +24,7 @@ const createTimes = () => {
       return;
     }
 
-    const resultList = document.getElementById('results');
+    const resultList = document.getElementById('resultsList');
     resultList.innerHTML = '';
 
     const possibleNumbers = Array.from({ length: maxValue }, (_, i) => i + 1);
@@ -60,4 +60,4 @@ const createTimes = () => {
   }
 }
 
-export default createTimes;
+export default createTimesDefaultCreation;
