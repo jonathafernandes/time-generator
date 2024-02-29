@@ -11,20 +11,27 @@ body {
 }
 
 input, button {
-  background: #FF630B;
-  border: 1px solid #242424;
   border-radius: 4px;
-  color: #121212;
   font-family: 'Manrope', sans-serif;
+  outline: none;
 
-  margin: 0.8rem 0;
+  margin-top: 0.3rem;
   padding: 0.5rem;
 
   opacity: 0.9;
 }
 
+input {
+  color: #f1f1f1;
+  background: #1a1a1a;
+  border: 1px solid #ebe9e8;
+}
+
 button {
-  cursor: pointer;  
+  background: #FF630B;
+  border: none;
+
+  cursor: pointer;
 }
 
 button:hover {
@@ -33,7 +40,7 @@ button:hover {
 
 a {
   color: #f1f1f1;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 header {
@@ -55,7 +62,7 @@ header {
   width: 24px;
 }
 
-.logo span {
+.logo a {
   font-weight: 700;
 }
 
@@ -87,8 +94,9 @@ header p {
   display: none;
 }
 
-#defaultCreation, #customCreation {
+#defaultCreationButton, #customCreationButton {
   width: 200px;
+  margin-top: 0.8rem;
 }
 
 .form {
@@ -99,7 +107,28 @@ header p {
   padding: 1.5rem;
 }
 
-#results {
+.form.customCreation {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.resultContent {
+  margin: 1rem 0;
+}
+
+.playerName {
+  margin-right: 0.4rem;
+}
+
+.listInputPlayers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.result {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -109,17 +138,17 @@ header p {
   list-style: none;
 }
 
-#results li {
+.result li {
   border: 1px solid #FF630B;
   border-radius: 4px;
   background: #242424;
 
   padding: 0.7rem;
-  width: 8rem;
+  width: 100%;
   height: 6rem;
 }
 
-#results li span {
+.result li span {
   border-bottom: 1px solid;
 }
 
@@ -128,7 +157,7 @@ footer {
   text-align: center;
   opacity: 0.7;
 
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 @media (max-width: 573px) {

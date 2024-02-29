@@ -1,14 +1,14 @@
-const createTimes = () => {
+export function createTimesDefaultCreation () {
     const form = document.querySelector('.form');
 
-    document.getElementById('createTimesButton').addEventListener('click', function() {
+    document.getElementById('createTimesDefaultCreationButton').addEventListener('click', function() {
     form.style.display = 'none';
     drawLots();
   });
 
   function drawLots() {
-    let quantityNumbers = document.getElementById('quantity').value;
-    let maxValue = document.getElementById('maxValue').value;
+    let quantityNumbers = document.getElementById('quantityDefaultCreation').value;
+    let maxValue = document.getElementById('maxValueDefaultCreation').value;
 
     quantityNumbers = parseInt(quantityNumbers, 10);
 
@@ -19,12 +19,12 @@ const createTimes = () => {
 
     maxValue = parseInt(maxValue, 10);
 
-    if (maxValue < 10 || maxValue > 25) {
-      alert("O número total de jogadores deve estar entre 10 e 25!");
+    if (maxValue < 8 || maxValue > 25) {
+      alert("O número total de jogadores deve estar entre 8 e 25!");
       return;
     }
 
-    const resultList = document.getElementById('results');
+    const resultList = document.getElementById('resultsDefaultCreation');
     resultList.innerHTML = '';
 
     const possibleNumbers = Array.from({ length: maxValue }, (_, i) => i + 1);
@@ -59,5 +59,3 @@ const createTimes = () => {
     return numbersDrawn;
   }
 }
-
-export default createTimes;
