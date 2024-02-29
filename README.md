@@ -1,5 +1,7 @@
 ## Time Generator ⚡ Vite JS Vanilla
 
+<img src="./public/images/screenshot-01.png" alt="" width="80%">
+
 **Criado com:**
 - JavaScript
 - Vite
