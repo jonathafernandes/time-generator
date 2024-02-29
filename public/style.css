@@ -126,10 +126,9 @@ header p {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.2rem;
-  margin-top: 0.8rem;
 }
 
-#resultsList {
+.result {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -139,7 +138,7 @@ header p {
   list-style: none;
 }
 
-#resultsList li {
+.result li {
   border: 1px solid #FF630B;
   border-radius: 4px;
   background: #242424;
@@ -149,7 +148,7 @@ header p {
   height: 6rem;
 }
 
-#resultsList li span {
+.result li span {
   border-bottom: 1px solid;
 }
 

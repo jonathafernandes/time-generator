@@ -7,8 +7,8 @@ export function createTimesDefaultCreation () {
   });
 
   function drawLots() {
-    let quantityNumbers = document.getElementById('quantity').value;
-    let maxValue = document.getElementById('maxValue').value;
+    let quantityNumbers = document.getElementById('quantityDefaultCreation').value;
+    let maxValue = document.getElementById('maxValueDefaultCreation').value;
 
     quantityNumbers = parseInt(quantityNumbers, 10);
 
@@ -24,7 +24,7 @@ export function createTimesDefaultCreation () {
       return;
     }
 
-    const resultList = document.getElementById('resultsList');
+    const resultList = document.getElementById('resultsDefaultCreation');
     resultList.innerHTML = '';
 
     const possibleNumbers = Array.from({ length: maxValue }, (_, i) => i + 1);

@@ -17,11 +17,11 @@ defaultCreationButton.addEventListener('click', () => {
 
   resultContent.innerHTML = `
     <div data-aos="zoom-out" class="form">
-      <label for="quantity">Digite a quantidade de jogadores em cada time (entre 4 e 5):</label>
-      <input type="number" id="quantity" min="4" max="5" value="5">
+      <label for="quantityDefaultCreation">Digite a quantidade de jogadores em cada time (entre 4 e 5):</label>
+      <input type="number" id="quantityDefaultCreation" min="4" max="5" value="5">
       <br>    
-      <label for="maxValue">Digite o total de jogadores (entre 10 e 25):</label>
-      <input type="number" id="maxValue" min="10" max="25" value="25">
+      <label for="maxValueDefaultCreation">Digite o total de jogadores (entre 10 e 25):</label>
+      <input type="number" id="maxValueDefaultCreation" min="10" max="25" value="25">
 
       <br>
       <br>
@@ -29,7 +29,7 @@ defaultCreationButton.addEventListener('click', () => {
       <button id="createTimesDefaultCreationButton">Definir times</button>
     </div>
 
-    <ul id="resultsList"></ul>
+    <ul class="result" id="resultsDefaultCreation"></ul>
   `;
   createTimesDefaultCreation();
 });
@@ -42,11 +42,11 @@ customCreationButton.addEventListener('click', () => {
 
   resultContent.innerHTML = `
     <div data-aos="zoom-out" class="form">
-      <label for="quantity">Digite a quantidade de jogadores em cada time (entre 4 e 5):</label>
-      <input type="number" id="quantity" min="4" max="5" value="5">
+      <label for="quantityCustomCreatiion">Digite a quantidade de jogadores em cada time (entre 4 e 5):</label>
+      <input type="number" id="quantityCustomCreatiion" min="4" max="5" value="5">
       <br>    
-      <label for="maxValue">Digite o total de jogadores (entre 10 e 25):</label>
-      <input type="number" id="maxValue" min="10" max="25" value="25">
+      <label for="maxValueCustomCreation">Digite o total de jogadores (entre 10 e 25):</label>
+      <input type="number" id="maxValueCustomCreation" min="10" max="25" value="15">
 
       <br>
       <br>
@@ -54,17 +54,17 @@ customCreationButton.addEventListener('click', () => {
       <button id="nextButton">Próximo</button>
     </div>
 
-    <ul id="results"></ul>
+    <ul class="result" id="resultsDefaultCreation"></ul>
   `;
 
   resultContent.addEventListener('click', event => {
     const target = event.target;
   
     if (target.id === 'nextButton') {
-      const maxValue = document.getElementById('maxValue').value;
+      const maxValueCustomCreation = document.getElementById('maxValueCustomCreation').value;
       let inputsHTML = '';
   
-      for (let i = 0; i < maxValue; i++) {
+      for (let i = 0; i < maxValueCustomCreation; i++) {
         inputsHTML += `
           <div>
             <input type="text" class="playerName" placeholder="Nome do jogador ${i + 1}">
@@ -83,14 +83,13 @@ customCreationButton.addEventListener('click', () => {
           <br>
           <button id="createTimesCustomButton">Definir times</button>
         </div>
-    
-        <ul id="results"></ul>
+        <ul class="result" id="resultsCustomCreation"></ul>
       `;
+    } else if (target.id === 'createTimesCustomButton') {
+      createTimesCustomCreation();
     }
   });
-  
 
-  createTimesCustomCreation();
 });
 
 backButton.addEventListener('click', () => {
