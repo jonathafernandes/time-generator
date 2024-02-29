@@ -1,5 +1,4 @@
 export function createTimesCustomCreation () {
-    // const playersContainer = document.querySelector('.listInputPlayers');
     const createTimesCustomButton = document.getElementById('createTimesCustomButton');
 
     function getPlayersData() {
@@ -26,7 +25,7 @@ export function createTimesCustomCreation () {
         let team2TotalLevel = 0;
         
         sortedPlayers.forEach((player, index) => {
-            if (index % 2 === 0 || index === 0) {
+            if (team1.length < 5 && (index % 2 === 0 || index === 0)) {
                 if (team1TotalLevel <= team2TotalLevel) {
                     team1.push(player);
                     team1TotalLevel += player.level;
@@ -35,12 +34,14 @@ export function createTimesCustomCreation () {
                     team2TotalLevel += player.level;
                 }
             } else {
-                if (team1TotalLevel <= team2TotalLevel) {
-                    team2.push(player);
-                    team2TotalLevel += player.level;
-                } else {
-                    team1.push(player);
-                    team1TotalLevel += player.level;
+                if (team2.length < 5 && (index % 2 !== 0 || index === 1)) {
+                    if (team1TotalLevel <= team2TotalLevel) {
+                        team1.push(player);
+                        team1TotalLevel += player.level;
+                    } else {
+                        team2.push(player);
+                        team2TotalLevel += player.level;
+                    }
                 }
             }
         });
@@ -49,27 +50,27 @@ export function createTimesCustomCreation () {
     }
 
     function displayTeams(teams) {
-        const resultsList = document.getElementById('resultsCustomCreation');
-        resultsList.innerHTML = '';
+        const resultContent = document.querySelector('.nextContent');
+        resultContent.innerHTML = '';
 
         teams.forEach((team, index) => {
             const teamElement = document.createElement('li');
             teamElement.innerHTML = 
-            `
+            `   
                 <div data-aos="zoom-out">
                     <strong>Time ${index + 1}</strong>
                     <br/>
                     ${team.map(player => player.name).join(', ')}
                 </div>
             `;
-            resultsList.appendChild(teamElement);
+            resultContent.appendChild(teamElement);
         });
     }
 
     function drawLots() {
         createTimesCustomButton.addEventListener('click', function() {
             const playersData = getPlayersData();
-            if (playersData.length < 2) {
+            if (playersData.length < 8) {
                 alert('Insira pelo menos dois jogadores para definir times!');
                 return;
             }

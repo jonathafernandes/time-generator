@@ -4,7 +4,7 @@ import { createTimesCustomCreation } from './src/createTimesCustomCreation.js';
 import { createTimesDefaultCreation } from './src/createTimesDefaultCreation.js'
 
 const title = document.querySelector('.title');
-const resultContent = document.querySelector('.resultContent');
+const nextContent = document.querySelector('.nextContent');
 const defaultCreationButton = document.getElementById('defaultCreationButton');
 const customCreationButton = document.getElementById('customCreationButton');
 const backButton = document.getElementById('backButton');
@@ -15,7 +15,7 @@ defaultCreationButton.addEventListener('click', () => {
   customCreationButton.style.display = 'none';
   backButton.style.display = 'block';
 
-  resultContent.innerHTML = `
+  nextContent.innerHTML = `
     <div data-aos="zoom-out" class="form">
       <label for="quantityDefaultCreation">Digite a quantidade de jogadores em cada time (entre 4 e 5):</label>
       <input type="number" id="quantityDefaultCreation" min="4" max="5" value="5">
@@ -30,6 +30,7 @@ defaultCreationButton.addEventListener('click', () => {
     </div>
 
     <ul class="result" id="resultsDefaultCreation"></ul>
+    <p class="info"></p>
   `;
   createTimesDefaultCreation();
 });
@@ -40,13 +41,13 @@ customCreationButton.addEventListener('click', () => {
   customCreationButton.style.display = 'none';
   backButton.style.display = 'block';
 
-  resultContent.innerHTML = `
+  nextContent.innerHTML = `
     <div data-aos="zoom-out" class="form">
       <label for="quantityCustomCreatiion">Digite a quantidade de jogadores em cada time (entre 4 e 5):</label>
       <input type="number" id="quantityCustomCreatiion" min="4" max="5" value="5">
       <br>    
       <label for="maxValueCustomCreation">Digite o total de jogadores (entre 10 e 25):</label>
-      <input type="number" id="maxValueCustomCreation" min="10" max="25" value="15">
+      <input type="number" id="maxValueCustomCreation" min="8" max="25" value="15">
 
       <br>
       <br>
@@ -57,7 +58,7 @@ customCreationButton.addEventListener('click', () => {
     <ul class="result" id="resultsDefaultCreation"></ul>
   `;
 
-  resultContent.addEventListener('click', event => {
+  nextContent.addEventListener('click', event => {
     const target = event.target;
   
     if (target.id === 'nextButton') {
@@ -73,7 +74,7 @@ customCreationButton.addEventListener('click', () => {
         `;
       }
   
-      resultContent.innerHTML = `
+      nextContent.innerHTML = `
         <div data-aos="zoom-out" class="form customCreation">
           <label>Insira os nomes e níveis dos jogadores:</label>
           <br>
@@ -98,5 +99,5 @@ backButton.addEventListener('click', () => {
   customCreationButton.style.display = 'block';
   backButton.style.display = 'none';
 
-  resultContent.innerHTML = '';
+  nextContent.innerHTML = '';
 });

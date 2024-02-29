@@ -19,8 +19,8 @@ export function createTimesDefaultCreation () {
 
     maxValue = parseInt(maxValue, 10);
 
-    if (maxValue < 10 || maxValue > 25) {
-      alert("O número total de jogadores deve estar entre 10 e 25!");
+    if (maxValue < 8 || maxValue > 25) {
+      alert("O número total de jogadores deve estar entre 8 e 25!");
       return;
     }
 
