@@ -41,7 +41,7 @@ customCreationButton.addEventListener('click', () => {
   backButton.style.display = 'block';
 
   resultContent.innerHTML = `
-    <div data-aos="zoom-out" class="form customCreation">
+    <div data-aos="zoom-out" class="form">
       <label for="quantity">Digite a quantidade de jogadores em cada time (entre 4 e 5):</label>
       <input type="number" id="quantity" min="4" max="5" value="5">
       <br>    
@@ -66,17 +66,18 @@ customCreationButton.addEventListener('click', () => {
   
       for (let i = 0; i < maxValue; i++) {
         inputsHTML += `
-          <input type="text" class="playerName" placeholder="Nome do jogador ${i + 1}">
-          <input type="number" class="playerLevel" min="1" max="5" value="5" ${i + 1}">
-          <br>
+          <div>
+            <input type="text" class="playerName" placeholder="Nome do jogador ${i + 1}">
+            <input type="number" class="playerLevel" min="1" max="5" value="5" ${i + 1}">
+          </div>
         `;
       }
   
       resultContent.innerHTML = `
-        <div data-aos="zoom-out" class="form">
+        <div data-aos="zoom-out" class="form customCreation">
           <label>Insira os nomes e níveis dos jogadores:</label>
           <br>
-          <div class="inputPlayers">
+          <div class="listInputPlayers">
             ${inputsHTML}
           </div>
           <br>

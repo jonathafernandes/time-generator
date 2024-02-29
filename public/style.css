@@ -109,6 +109,7 @@ header p {
 
 .form.customCreation {
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -116,10 +117,15 @@ header p {
   margin: 1rem 0;
 }
 
-.inputPlayers {
+.playerName {
+  margin-right: 0.4rem;
+}
+
+.listInputPlayers {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.2rem;
   margin-top: 0.8rem;
 }
 
