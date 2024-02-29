@@ -1,4 +1,4 @@
-const createTimesCustomCreation = () => {
+export function createTimesCustomCreation () {
     const players = document.getElementById('players');
 
     function creatInputPlayers() {
@@ -16,5 +16,3 @@ const createTimesCustomCreation = () => {
 
     creatInputPlayers();
 };
-
-export default createTimesCustomCreation;

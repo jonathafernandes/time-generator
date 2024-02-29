@@ -1,7 +1,7 @@
 import './public/style.css'
 
-import createTimesCustomCreation from './src/createTimesCustomCreation.js';
-import createTimesDefaultCreation from './src/createTimesDefaultCreation.js'
+import { createTimesCustomCreation } from './src/createTimesCustomCreation.js';
+import { createTimesDefaultCreation } from './src/createTimesDefaultCreation.js'
 
 const title = document.querySelector('.title');
 const resultContent = document.querySelector('.resultContent');

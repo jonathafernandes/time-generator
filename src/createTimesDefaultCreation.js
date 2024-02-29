@@ -1,4 +1,4 @@
-const createTimesDefaultCreation = () => {
+export function createTimesDefaultCreation () {
     const form = document.querySelector('.form');
 
     document.getElementById('createTimesDefaultCreationButton').addEventListener('click', function() {
@@ -59,5 +59,3 @@ const createTimesDefaultCreation = () => {
     return numbersDrawn;
   }
 }
-
-export default createTimesDefaultCreation;
