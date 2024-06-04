@@ -18,8 +18,8 @@ defaultCreation.addEventListener('click', () => {
       <label for="quantity">Digite a quantidade de jogadores em cada time (entre 4 e 5):</label>
       <input type="number" id="quantity" min="4" max="5" value="5">
       <br>    
-      <label for="maxValue">Digite o total de jogadores (entre 10 e 25):</label>
-      <input type="number" id="maxValue" min="10" max="25" value="25">
+      <label for="maxValue">Digite o total de jogadores (entre 8 e 25):</label>
+      <input type="number" id="maxValue" min="8" max="25" value="25">
 
       <br>
       <br>

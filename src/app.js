@@ -7,20 +7,20 @@ const createTimes = () => {
   });
 
   function drawLots() {
-    let quantityNumbers = document.getElementById('quantity').value;
     let maxValue = document.getElementById('maxValue').value;
+    let numbersPerDraw = document.getElementById('quantity').value;
 
-    quantityNumbers = parseInt(quantityNumbers, 10);
+    numbersPerDraw = parseInt(numbersPerDraw, 10);
 
-    if (quantityNumbers < 4 || quantityNumbers > 5) {
+    if (numbersPerDraw < 4 || numbersPerDraw > 5) {
       alert("A quantidade de jogadores em cada time deve estar entre 4 e 5!");
       return;
     }
 
     maxValue = parseInt(maxValue, 10);
 
-    if (maxValue < 10 || maxValue > 25) {
-      alert("O número total de jogadores deve estar entre 10 e 25!");
+    if (maxValue < 8 || maxValue > 25) {
+      alert("O número total de jogadores deve estar entre 8 e 25!");
       return;
     }
 
@@ -29,8 +29,9 @@ const createTimes = () => {
 
     const possibleNumbers = Array.from({ length: maxValue }, (_, i) => i + 1);
 
-    for (let raffle = 1; raffle <= quantityNumbers; raffle++) {
-      const numbersDrawn = generateNoRepetition(possibleNumbers, quantityNumbers);
+    const quantityDraws = 5;
+    for (let raffle = 1; raffle <= quantityDraws; raffle++) {
+      const numbersDrawn = generateNoRepetition(possibleNumbers, numbersPerDraw);
 
       const listItem = document.createElement('li');
       listItem.innerHTML = `
